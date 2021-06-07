@@ -1,49 +1,59 @@
 <template>
-  <div class="belt">
+  <section class="belt">
     <div class="container">
       <div class="links-container">
-        <div class="link">
+        <div v-for="(link, index) in links" :key="index" class="link">
           <img
-            src="../assets/img/buy-comics-digital-comics.png"
-            alt="digital-comics"
+            :src="link.img"
+            :alt="link.text"
+            :class="{ 'svg' : link.svg == true, 'shop' : link.resize == true }"
           />
-          <h5>digital comics</h5>
-        </div>
-        <div class="link">
-          <img
-            src="../assets/img/buy-comics-merchandise.png"
-            alt="merchandise"
-          />
-          <h5>dc merchandise</h5>
-        </div>
-        <div class="link">
-          <img src="../assets/img/buy-comics-subscriptions.png" alt="sub" />
-          <h5>subscription</h5>
-        </div>
-        <div class="link">
-          <img
-            class="shop"
-            src="../assets/img/buy-comics-shop-locator.png"
-            alt="shop-locator"
-          />
-          <h5>comic shop locator</h5>
-        </div>
-        <div class="link">
-          <img
-            class="svg"
-            src="../assets/img/buy-dc-power-visa.svg"
-            alt="visa"
-          />
-          <h5>dc power visa</h5>
+          <h5>{{ link.text }}</h5>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
 export default {
   name: "Links",
+  data() {
+    return {
+      links: [
+        {
+          text: "digital comics",
+          img: require("../assets/img/buy-comics-digital-comics.png"),
+          resize: false,
+          svg: false
+        },
+        {
+          text: "dc merchandise",
+          img: require("../assets/img/buy-comics-merchandise.png"),
+          resize: false,
+          svg: false
+        },
+        {
+          text: "subscriptions",
+          img: require("../assets/img/buy-comics-subscriptions.png"),
+          resize: false,
+          svg: false
+        },
+        {
+          text: "comic shop locator",
+          img: require("../assets/img/buy-comics-shop-locator.png"),
+          resize: true,
+          svg: false
+        },
+        {
+          text: "dc power visa",
+          img: require("../assets/img/buy-dc-power-visa.svg"),
+          resize: false,
+          svg: true
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -74,6 +84,7 @@ export default {
 
 h5 {
   text-transform: uppercase;
+  font-size: 0.7rem;
   color: #fff;
 }
 .belt {
@@ -82,6 +93,6 @@ h5 {
 }
 
 .svg {
-  height: 90px;
+  height: 100px;
 }
 </style>

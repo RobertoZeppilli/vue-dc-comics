@@ -3,10 +3,8 @@
     <Header />
     <Content />
     <Links />
-
     <footer>
       <Dc />
-
       <Bottom />
     </footer>
   </div>
@@ -49,6 +47,5 @@ export default {
 
 footer {
   background-image: url(./assets/img/footer-bg.jpg);
-  height: 300px;
 }
 </style>

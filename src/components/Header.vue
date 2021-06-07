@@ -7,9 +7,10 @@
       <nav>
         <ul>
           <li
-            :class="link.active == true ? 'active' : ''"
             v-for="(link, index) in links"
             :key="index"
+            @click="getActive(index)"
+            :class="{'active' : index == activeIndex}"
           >
             <a :href="link.url">
               {{ link.text }}
@@ -29,57 +30,53 @@ export default {
       links: [
         {
           text: "characters",
-          url: "#characters",
-          active: false,
+          url: "#characters"
         },
         {
           text: "comics",
-          url: "#comics",
-          active: true,
+          url: "#comics"
         },
         {
           text: "movies",
-          url: "#movies",
-          active: false,
+          url: "#movies"
         },
         {
           text: "tv",
-          url: "#tv",
-          active: false,
+          url: "#tv"
         },
         {
           text: "games",
-          url: "#games",
-          active: false,
+          url: "#games"
         },
         {
           text: "collectibles",
-          url: "#colectibles",
-          active: false,
+          url: "#colectibles"
         },
         {
           text: "videos",
-          url: "#videos",
-          active: false,
+          url: "#videos"
         },
         {
           text: "fans",
-          url: "#fans",
-          active: false,
+          url: "#fans"
         },
         {
           text: "news",
-          url: "#news",
-          active: false,
+          url: "#news"
         },
         {
           text: "shop",
-          url: "#shop",
-          active: false,
+          url: "#shop"
         },
       ],
+      activeIndex: 0
     };
   },
+  methods: {
+    getActive: function (index) {
+      return this.activeIndex = index
+    }
+  }
 };
 </script>
 
@@ -100,10 +97,10 @@ ul {
   list-style: none;
   li {
     margin: 0 0.7rem;
+    padding: 0 0.5rem;
     transition: all 0.5s ease-in-out;
 
-    &.active,
-    &:hover {
+    &.active {
       border-bottom: 2px solid #0282f9;
     }
   }

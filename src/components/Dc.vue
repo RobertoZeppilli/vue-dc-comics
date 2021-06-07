@@ -126,14 +126,13 @@ export default {
   display: flex;
   flex-wrap: wrap;
   padding: 30px 0;
-  height: 300px;
   background-image: url(../assets/img/dc-logo-bg.png);
+  background-size: 35%;
   background-repeat: no-repeat;
   background-position: right center;
 }
 .list-container {
-  margin-bottom: 10px;
-  margin-right: 15px;
+  margin-right: 25px;
 }
 
 .first-col {
@@ -147,7 +146,7 @@ ul {
     text-transform: uppercase;
 
     h4 {
-      margin-bottom: 12px;
+      margin-bottom: 15px;
     }
   }
   a {
