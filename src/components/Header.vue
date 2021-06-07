@@ -1,6 +1,6 @@
 <template>
-  <header>
-    <div class="container">
+  <div class="container">
+    <header>
       <a href="#logo">
         <img src="../assets/img/dc-logo.png" alt="logo" />
       </a>
@@ -17,8 +17,8 @@
           </li>
         </ul>
       </nav>
-    </div>
-  </header>
+    </header>
+  </div>
 </template>
 
 <script>
