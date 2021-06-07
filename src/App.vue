@@ -32,6 +32,9 @@ export default {
 </script>
 
 <style lang="scss">
+
+@import './style/variables';
+
 * {
   margin: 0;
   padding: 0;
@@ -39,7 +42,7 @@ export default {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: $containerWidth;
   margin: 0 auto;
 }
 

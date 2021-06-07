@@ -34,11 +34,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @import "../style/variables";
+
 .container {
     display: flex;
     justify-content: space-between;
-    width: 1200px;
+    width: $containerWidth;
 }
 
 .footer-bottom {
