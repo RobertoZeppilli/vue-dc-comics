@@ -1,32 +1,23 @@
 <template>
   <div id="app">
-    
     <Header />
-
-    <main>
-      <div class="container">
-        <Content />
-      </div>
-    </main>
+    <Content />
     <Links />
 
     <footer>
-      <div class="container">
-        <Dc />
-      </div>
-      <div class="footer-bottom">
-        <Bottom />
-      </div>
+      <Dc />
+
+      <Bottom />
     </footer>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
-import Content from "./components/Content.vue";
+import Content from "./components/Content";
 import Links from "./components/Links";
 import Dc from "./components/Dc";
-import Bottom from "./components/Bottom.vue";
+import Bottom from "./components/Bottom";
 
 export default {
   name: "App",
@@ -52,18 +43,8 @@ export default {
   margin: 0 auto;
 }
 
-main {
-  text-align: center;
-  height: 100px;
-  background-color: #191919;
-}
-
 footer {
   background-image: url(./assets/img/footer-bg.jpg);
   height: 300px;
-}
-
-.footer-bottom {
-  background-color: #303030;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="footer-bottom">
+  <div class="footer-bottom">
+    <div class="container">
       <div class="button-container">
         <button>sign-up now!</button>
       </div>
@@ -34,8 +34,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @import "../style/variables";
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+}
 
 .footer-bottom {
   height: 100px;
