@@ -1,23 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 $font: 'Roboto';
+$lightText: #fff;
 $textColor: #0282f9;
 $linkColor: #86847c;
+$bgDark: #191919;
+$bgGrey: #303030;
 $containerWidth: 1000px;
-
-@mixin flexCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@mixin flexBetween {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-@mixin reset {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}

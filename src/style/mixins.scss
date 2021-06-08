@@ -1,0 +1,41 @@
+@mixin flex ($type: 'default') {
+    display: flex;
+    @if $type == 'center' {
+        justify-content: center;
+        align-items: center;
+    } @else if $type == 'between' {
+        justify-content: space-between;
+        align-items: center;
+    } @else {
+        align-items: center;
+    }
+}
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin footerBtn {
+    background-color: transparent;
+    outline: none;
+    padding: 10px 20px;
+    border: 1px solid $textColor;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.5s ease-in-out;
+}
+
+@mixin mainBtn {
+    outline: none;
+    background-color: $textColor;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: 1px solid $textColor;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+}

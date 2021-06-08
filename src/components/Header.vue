@@ -84,9 +84,10 @@ export default {
 
 <style lang="scss" scoped>
 @import "../style/variables";
+@import "../style/mixins";
 
 .navigation {
-  @include flexBetween;
+  @include flex ($type: 'between');
   padding: 1.2rem 0;
   height: 100px;
 }
@@ -104,7 +105,7 @@ ul {
 
     &.active,
     &:hover {
-      border-bottom: 4px solid #0282f9;
+      border-bottom: 4px solid $textColor;
     }
   }
   a {
@@ -117,7 +118,7 @@ ul {
     line-height: 96px;
 
     &:hover {
-      color: #0282f9;
+      color: $textColor;
     }
   }
 }

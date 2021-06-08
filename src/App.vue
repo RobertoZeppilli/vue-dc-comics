@@ -38,14 +38,12 @@ export default {
 
 <style lang="scss">
 @import "./style/variables";
+@import './style/mixins';
 
 * {
   @include reset;
   font-family: $font, sans-serif;
 }
-// main {
-//   height: 500px;
-// }
 .container {
   max-width: $containerWidth;
   margin: 0 auto;

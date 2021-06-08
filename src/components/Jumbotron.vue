@@ -1,6 +1,8 @@
 <template>
   <div class="jumbotron">
-      <span>Current Series</span>
+    <div class="container">
+      <h3>Current Series</h3>
+    </div>
   </div>
 </template>
 
@@ -11,18 +13,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../style/variables';
+@import "../style/variables";
 
 .jumbotron {
-    position: relative;
+  position: relative;
   height: 300px;
   width: 100%;
   background-image: url("../assets/img/jumbotron.jpg");
   background-size: cover;
-}
-
-span {
+  h3 {
     position: absolute;
+    bottom: -20px;
     background-color: $textColor;
+    padding: 10px 20px;
+    color: $lightText;
+    text-transform: uppercase;
+  }
 }
 </style>

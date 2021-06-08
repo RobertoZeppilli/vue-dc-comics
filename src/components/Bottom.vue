@@ -46,21 +46,21 @@ export default {
 <style lang="scss" scoped>
 
 @import "../style/variables";
+@import "../style/mixins";
 
 .container {
-    @include flexBetween;
+    @include flex ($type: 'between');
     width: $containerWidth;
 }
 
 .footer-bottom {
   padding: 30px 0;
-  background-color: #303030;
-  @include flexBetween;
+  background-color: $bgGrey;
+  @include flex ($type: 'between');
 }
 
 .socials {
-  display: flex;
-  align-items: center;
+  @include flex ($type: 'default');
   h3 {
     text-transform: uppercase;
     color: $textColor;
@@ -80,14 +80,7 @@ export default {
   margin-left: 0.7rem;
 }
 button {
-  background-color: transparent;
-  outline: none;
-  padding: 10px 20px;
-  border: 1px solid $textColor;
-  text-transform: uppercase;
-  cursor: pointer;
-  color: #fff;
-  transition: background-color 0.5s ease-in-out;
+  @include footerBtn;
 }
 
 button:hover {

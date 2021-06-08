@@ -8,7 +8,7 @@
 <script>
 export default {
   name: "Card",
-  props: ["item"]
+  props: ["item"],
 };
 </script>
 
@@ -16,17 +16,20 @@ export default {
 @import "../style/variables";
 
 .card {
-  width: calc(100% / 6);
-  padding: 0 10px;
-  margin-bottom: 10px;
+  width: calc(100% / 6 - 20px);
+  height: 150px;
+  margin: 0 10px 60px 10px;
 
   & > img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
   }
 }
 p {
-  color: #fff;
-  font-size: .7rem;
+  color: $lightText;
+  font-size: 0.7rem;
   font-weight: bold;
 }
 </style>

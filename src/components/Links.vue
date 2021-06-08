@@ -6,7 +6,7 @@
           <img
             :src="link.img"
             :alt="link.text"
-            :class="{ 'svg' : link.svg == true, 'shop' : link.resize == true }"
+            :class="{ svg: link.svg == true, shop: link.resize == true }"
           />
           <h5>{{ link.text }}</h5>
         </div>
@@ -25,31 +25,31 @@ export default {
           text: "digital comics",
           img: require("../assets/img/buy-comics-digital-comics.png"),
           resize: false,
-          svg: false
+          svg: false,
         },
         {
           text: "dc merchandise",
           img: require("../assets/img/buy-comics-merchandise.png"),
           resize: false,
-          svg: false
+          svg: false,
         },
         {
           text: "subscriptions",
           img: require("../assets/img/buy-comics-subscriptions.png"),
           resize: false,
-          svg: false
+          svg: false,
         },
         {
           text: "comic shop locator",
           img: require("../assets/img/buy-comics-shop-locator.png"),
           resize: true,
-          svg: false
+          svg: false,
         },
         {
           text: "dc power visa",
           img: require("../assets/img/buy-dc-power-visa.svg"),
           resize: false,
-          svg: true
+          svg: true,
         },
       ],
     };
@@ -59,6 +59,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../style/variables";
+@import "../style/mixins";
 
 .container {
   max-width: 900px;
@@ -68,21 +69,21 @@ export default {
   display: flex;
 }
 .link {
-  @include flexCenter;
-  img {
+  @include flex($type: "center");
+  & > img {
     width: 20%;
     margin-right: 10px;
     &.shop {
       width: 15%;
     }
   }
+  h5 {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: $lightText;
+  }
 }
 
-h5 {
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  color: #fff;
-}
 .belt {
   padding: 30px 0;
   background-color: $textColor;
