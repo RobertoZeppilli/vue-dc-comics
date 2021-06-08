@@ -1,21 +1,4 @@
-<template>
-  <section>
-    <div class="container card-container">
-      <Card :item="comic" v-for="(comic,index) in comics" :key="index"/>
-    </div>
-  </section>
-</template>
-
-<script>
-import Card from '../components/Card'
-export default {
-  name: "Content",
-  components: {
-    Card
-  },
-  data() {
-    return {
-      comics: [
+export default [
     {
       "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX",
       "price": "$19.99",
@@ -89,25 +72,3 @@ export default {
       "type": "graphic novel"
     }
   ]
-    }
-  }
-};
-</script>
-
-<style lang="scss" scoped>
-@import '../style/variables';
-section {
-  background-color: #191919;
-}
-.card-container {
-  background-color: #191919;
-  display: flex;
-  flex-wrap: wrap;
-  padding: 40px 0;
-  h2 {
-    color: #fff;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-}
-</style>

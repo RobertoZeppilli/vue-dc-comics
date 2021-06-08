@@ -1,8 +1,13 @@
 <template>
   <div id="app">
-    <Header />
-    <Content />
-    <Links />
+    <header>
+      <Header />
+      <Jumbotron />
+    </header>
+    <main>
+      <Content />
+      <Links />
+    </main>
     <footer>
       <Dc />
       <Bottom />
@@ -12,6 +17,7 @@
 
 <script>
 import Header from "./components/Header";
+import Jumbotron from './components/Jumbotron'
 import Content from "./components/Content";
 import Links from "./components/Links";
 import Dc from "./components/Dc";
@@ -21,6 +27,7 @@ export default {
   name: "App",
   components: {
     Header,
+    Jumbotron,
     Content,
     Links,
     Dc,
@@ -30,16 +37,15 @@ export default {
 </script>
 
 <style lang="scss">
-
-@import './style/variables';
+@import "./style/variables";
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  @include reset;
   font-family: $font, sans-serif;
 }
-
+// main {
+//   height: 500px;
+// }
 .container {
   max-width: $containerWidth;
   margin: 0 auto;

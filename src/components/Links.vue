@@ -61,18 +61,14 @@ export default {
 @import "../style/variables";
 
 .container {
-  height: 100%;
-  width: calc($containerWidth - 300px);
+  max-width: 900px;
   margin: 0 auto;
 }
 .links-container {
   display: flex;
-  height: 100%;
 }
 .link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexCenter;
   img {
     width: 20%;
     margin-right: 10px;
@@ -88,8 +84,8 @@ h5 {
   color: #fff;
 }
 .belt {
-  height: 150px;
-  background-color: #0282f9;
+  padding: 30px 0;
+  background-color: $textColor;
 }
 
 .svg {

@@ -1,16 +1,18 @@
 <template>
   <div class="container">
-    <header>
-      <a href="#logo">
-        <img src="../assets/img/dc-logo.png" alt="logo" />
-      </a>
+    <div class="navigation">
+      <div class="logo">
+        <a href="#logo">
+          <img src="../assets/img/dc-logo.png" alt="logo" />
+        </a>
+      </div>
       <nav>
         <ul>
           <li
             v-for="(link, index) in links"
             :key="index"
             @click="getActive(index)"
-            :class="{'active' : index == activeIndex}"
+            :class="{ active: index == activeIndex }"
           >
             <a :href="link.url">
               {{ link.text }}
@@ -18,7 +20,7 @@
           </li>
         </ul>
       </nav>
-    </header>
+    </div>
   </div>
 </template>
 
@@ -30,61 +32,61 @@ export default {
       links: [
         {
           text: "characters",
-          url: "#characters"
+          url: "#characters",
         },
         {
           text: "comics",
-          url: "#comics"
+          url: "#comics",
         },
         {
           text: "movies",
-          url: "#movies"
+          url: "#movies",
         },
         {
           text: "tv",
-          url: "#tv"
+          url: "#tv",
         },
         {
           text: "games",
-          url: "#games"
+          url: "#games",
         },
         {
           text: "collectibles",
-          url: "#colectibles"
+          url: "#colectibles",
         },
         {
           text: "videos",
-          url: "#videos"
+          url: "#videos",
         },
         {
           text: "fans",
-          url: "#fans"
+          url: "#fans",
         },
         {
           text: "news",
-          url: "#news"
+          url: "#news",
         },
         {
           text: "shop",
-          url: "#shop"
+          url: "#shop",
         },
       ],
-      activeIndex: 0
+      activeIndex: 0,
     };
   },
   methods: {
     getActive: function (index) {
-      return this.activeIndex = index
-    }
-  }
+      return (this.activeIndex = index);
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+@import "../style/variables";
+
+.navigation {
+  @include flexBetween;
   padding: 1.2rem 0;
   height: 100px;
 }
@@ -96,12 +98,13 @@ ul {
   display: flex;
   list-style: none;
   li {
-    margin: 0 0.7rem;
-    padding: 0 0.5rem;
+    margin-left: 0.7rem;
+    line-height: 96px;
     transition: all 0.5s ease-in-out;
 
-    &.active {
-      border-bottom: 2px solid #0282f9;
+    &.active,
+    &:hover {
+      border-bottom: 4px solid #0282f9;
     }
   }
   a {
@@ -109,9 +112,9 @@ ul {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 0.7rem;
-    color: #86847c;
+    color: $linkColor;
     display: block;
-    line-height: 98px;
+    line-height: 96px;
 
     &:hover {
       color: #0282f9;

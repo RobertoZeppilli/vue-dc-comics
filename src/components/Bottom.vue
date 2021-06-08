@@ -8,19 +8,29 @@
       <div class="socials">
         <h3>follow us</h3>
         <div class="social-container">
-          <img src="../assets/img/footer-facebook.png" alt="facebook" />
+          <a href="">
+            <img src="../assets/img/footer-facebook.png" alt="facebook" />
+          </a>
         </div>
         <div class="social-container">
-          <img src="../assets/img/footer-twitter.png" alt="twitter" />
+          <a href="">
+            <img src="../assets/img/footer-twitter.png" alt="twitter" />
+          </a>
         </div>
         <div class="social-container">
-          <img src="../assets/img/footer-youtube.png" alt="youtube" />
+          <a href="">
+            <img src="../assets/img/footer-youtube.png" alt="youtube" />
+          </a>
         </div>
         <div class="social-container">
-          <img src="../assets/img/footer-pinterest.png" alt="pinterest" />
+          <a href="">
+            <img src="../assets/img/footer-pinterest.png" alt="pinterest" />
+          </a>
         </div>
         <div class="social-container">
-          <img src="../assets/img/footer-periscope.png" alt="periscope" />
+          <a href="#">
+            <img src="../assets/img/footer-periscope.png" alt="periscope" />
+          </a>
         </div>
       </div>
     </div>
@@ -38,17 +48,14 @@ export default {
 @import "../style/variables";
 
 .container {
-    display: flex;
-    justify-content: space-between;
+    @include flexBetween;
     width: $containerWidth;
 }
 
 .footer-bottom {
-  height: 100px;
+  padding: 30px 0;
   background-color: #303030;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flexBetween;
 }
 
 .socials {
@@ -59,10 +66,18 @@ export default {
     color: $textColor;
     margin-right: 20px;
   }
+  img {
+    overflow: hidden;
+    border-radius: 50%;
+    &:hover {
+      background-color: rgba($linkColor, 0.2); 
+    }
+  }
+   
 }
 
 .social-container {
-  margin: 0 10px;
+  margin-left: 0.7rem;
 }
 button {
   background-color: transparent;
