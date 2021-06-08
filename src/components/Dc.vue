@@ -128,28 +128,28 @@ export default {
   background-size: 30rem auto;
   background-repeat: no-repeat;
   background-position: right center;
-}
-.list-container {
-  margin-right: 25px;
-}
 
-.first-col {
-  margin-bottom: 20px;
-}
-ul {
-  list-style: none;
+  & > .list-container {
+    margin-right: 25px;
+    & > .first-col {
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style: none;
 
-  li {
-    color: #fff;
-    text-transform: capitalize;
-    a {
-      color: $linkColor;
-      text-decoration: none;
-      font-size: 0.64rem;
-      transition: color 0.5s ease-in-out;
+      li {
+        color: #fff;
+        text-transform: capitalize;
+        a {
+          color: $linkColor;
+          text-decoration: none;
+          font-size: 0.64rem;
+          transition: color 0.5s ease-in-out;
 
-      &:hover {
-        color: $textColor;
+          &:hover {
+            color: $textColor;
+          }
+        }
       }
     }
   }

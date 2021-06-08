@@ -44,23 +44,52 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @import "../style/variables";
 @import "../style/mixins";
 
-.container {
-    @include flex ($type: 'between');
-    width: $containerWidth;
-}
+// .container {
+//   @include flex($type: "between");
+//   width: $containerWidth;
+// }
 
 .footer-bottom {
   padding: 30px 0;
   background-color: $bgGrey;
-  @include flex ($type: 'between');
+  @include flex($type: "between");
+
+  & > .container {
+    @include flex($type: "between");
+    width: $containerWidth;
+    
+    .socials {
+      @include flex($type: "default");
+      h3 {
+        text-transform: uppercase;
+        color: $textColor;
+        margin-right: 20px;
+      }
+      .social-container {
+        margin-left: 0.7rem;
+      }
+      img {
+        overflow: hidden;
+        border-radius: 50%;
+        &:hover {
+          background-color: rgba($linkColor, 0.2);
+        }
+      }
+    }
+  }
+  button {
+    @include footerBtn;
+    &:hover {
+      background-color: $textColor;
+    }
+  }
 }
 
 .socials {
-  @include flex ($type: 'default');
+  @include flex($type: "default");
   h3 {
     text-transform: uppercase;
     color: $textColor;
@@ -70,20 +99,19 @@ export default {
     overflow: hidden;
     border-radius: 50%;
     &:hover {
-      background-color: rgba($linkColor, 0.2); 
+      background-color: rgba($linkColor, 0.2);
     }
   }
-   
 }
 
-.social-container {
-  margin-left: 0.7rem;
-}
-button {
-  @include footerBtn;
-}
+// .social-container {
+//   margin-left: 0.7rem;
+// }
+// button {
+//   @include footerBtn;
+// }
 
-button:hover {
-  background-color: $textColor;
-}
+// button:hover {
+//   background-color: $textColor;
+// }
 </style>

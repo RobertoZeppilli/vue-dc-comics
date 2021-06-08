@@ -61,35 +61,35 @@ export default {
 @import "../style/variables";
 @import "../style/mixins";
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-.links-container {
-  display: flex;
-}
-.link {
-  @include flex($type: "center");
-  & > img {
-    width: 20%;
-    margin-right: 10px;
-    &.shop {
-      width: 15%;
-    }
-  }
-  h5 {
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    color: $lightText;
-  }
-}
-
 .belt {
   padding: 30px 0;
   background-color: $textColor;
+
+  & > .container {
+    max-width: 900px;
+    margin: 0 auto;
+    & > .links-container {
+      display: flex;
+      & > .link {
+        @include flex($type: "center");
+        & > img {
+          width: 20%;
+          margin-right: 10px;
+          &.shop {
+            width: 15%;
+          }
+          &.svg {
+            height: 100px;
+          }
+        }
+        h5 {
+          text-transform: uppercase;
+          font-size: 0.7rem;
+          color: $lightText;
+        }
+      }
+    }
+  }
 }
 
-.svg {
-  height: 100px;
-}
 </style>

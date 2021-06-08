@@ -26,10 +26,11 @@ export default {
     object-fit: cover;
     object-position: top;
   }
-}
-p {
-  color: $lightText;
-  font-size: 0.7rem;
-  font-weight: bold;
+  p {
+    margin-top: 10px;
+    color: $lightText;
+    font-size: 0.87rem;
+    font-weight: bold;
+  }
 }
 </style>

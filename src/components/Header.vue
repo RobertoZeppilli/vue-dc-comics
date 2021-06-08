@@ -87,38 +87,37 @@ export default {
 @import "../style/mixins";
 
 .navigation {
-  @include flex ($type: 'between');
+  @include flex($type: "between");
   padding: 1.2rem 0;
   height: 100px;
-}
-img {
-  width: 70%;
-}
-
-ul {
-  display: flex;
-  list-style: none;
-  li {
-    margin-left: 0.7rem;
-    line-height: 96px;
-    transition: all 0.5s ease-in-out;
-
-    &.active,
-    &:hover {
-      border-bottom: 4px solid $textColor;
-    }
+  img {
+    width: 70%;
   }
-  a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 0.7rem;
-    color: $linkColor;
-    display: block;
-    line-height: 96px;
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      margin-left: 0.7rem;
+      line-height: 96px;
+      transition: all 0.5s ease-in-out;
 
-    &:hover {
-      color: $textColor;
+      &.active,
+      &:hover {
+        border-bottom: 4px solid $textColor;
+      }
+    }
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.7rem;
+      color: $linkColor;
+      display: block;
+      line-height: 96px;
+
+      &:hover {
+        color: $textColor;
+      }
     }
   }
 }
